@@ -1,0 +1,74 @@
+/* styles.css */
+
+/* Give the whole window a dark background and some padding */
+.root {
+    -fx-background-color: #2B2B2B;
+    -fx-padding: 20px;
+}
+
+/* Add spacing between cells in the GridPane */
+.grid-pane {
+    -fx-hgap: 10px;
+    -fx-vgap: 10px;
+}
+
+/* Style for all buttons (the Tic-Tac-Toe cells and the Reset button) */
+.button {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-background-color: linear-gradient(to bottom right, #61A2B1, #2A5058);
+    -fx-text-fill: white;
+    -fx-border-color: #1C3B4A;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
+
+/* Hover state for buttons */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom right, #2A5058, #61A2B1);
+}
+
+/* Pressed (clicked) state for buttons */
+.button:pressed {
+    -fx-background-color: #1C3B4A;
+}
+
+/* Style for all labels (including turn indicator and score labels) */
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #E0E0E0;
+    -fx-padding: 5px;
+}
+
+/* Center the "Play Again" reset button a bit more */
+.reset-button {
+    -fx-pref-width: 120px;
+    -fx-pref-height: 35px;
+}
+
+/* You can give your score labels a slightly different style */
+.score-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* If you want a special style for the main "Player X's Turn" label: */
+.title-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFCC00;
+}
+
+/* Example: add a light drop shadow to the GridPane so it “pops” off the dark background */
+.grid-pane {
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.6) , 8, 0.0 , 0 , 2 );
+}
+
+/* When a cell is disabled (i.e. already clicked), dim it slightly */
+.button:disabled {
+    -fx-opacity: 0.6;
+    -fx-text-fill: #CCCCCC;
+    -fx-background-color: linear-gradient(to bottom right, #444444, #333333);
+}
